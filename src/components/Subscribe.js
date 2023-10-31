@@ -12,8 +12,7 @@ const Subscribe = () => {
             Subscribe to our Blog
           </h2>
           <p className="leading-loose font-[500]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod
-            tempor incididunt labore dolore.
+            Get update by subscribing to our news letter
           </p>
           <div className="relative w-full">
             <input

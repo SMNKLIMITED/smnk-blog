@@ -13,60 +13,22 @@ export default function signUp() {
   const [color, setColor] = useState("#000000");
   const router = useRouter();
 
-  const override = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
-  };
+  
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!name || !email || !password) {
-      setError("All fields are necessary.");
-      return;
-    }
-
-    try {
-       
-
-      const res = await fetch("api/register/route", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          password,
-        }),
-      });
-
-      if (res.ok) {
-        const form = e.target;
-        form.reset();
-        router.push("/login");
-      }
-       else {
-        setError(" registration failed try again.");
-      }
-    } catch (error) {
-      setError("Error during registration: ", error);
-    }
-  };
+ 
 
   return (
     <div className="grid place-items-center h-screen ">
 
      
-      <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400 md:w-[600px]">
+      <div className="shadow-lg p-5 rounded-lg border-t-4 border-blue-400 md:w-[600px]">
         <h1 className="text-xl font-bold my-4">Register</h1>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <form  className="flex flex-col gap-3">
         
        
           <input
-            onChange={(e) => setName(e.target.value)}
+            
             type="text"
             placeholder="Full Name"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-700 darktext-white-700 leading-tight focus:outline-none focus:shadow-outline" 
@@ -74,7 +36,7 @@ export default function signUp() {
           />
            
           <input
-            onChange={(e) => setEmail(e.target.value)}
+          
             type="text"
             placeholder="Email"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-700 darktext-white-700 leading-tight focus:outline-none focus:shadow-outline" 
@@ -83,7 +45,7 @@ export default function signUp() {
            
 
           <input
-            onChange={(e) => setPassword(e.target.value)}
+            
             type="password"
             placeholder="Password"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-700 darktext-white-700 leading-tight focus:outline-none focus:shadow-outline" 
@@ -91,7 +53,7 @@ export default function signUp() {
           />
 
            <input
-            onChange={(e) => setPassword(e.target.value)}
+           
             type="date"
             placeholder="DOB"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-700 darktext-white-700 leading-tight focus:outline-none focus:shadow-outline" 
@@ -117,7 +79,7 @@ export default function signUp() {
     <option value="creators">Creator</option>
     </select>
 
-          <button className="bg-green-600 text-white font-bold cursor-pointer px-6 py-2" onClick={()=>{setLoading(!loading)}}>
+          <button className="bg-blue-600 text-white font-bold cursor-pointer px-6 py-2" onClick={()=>{setLoading(!loading)}}>
 
           <ClipLoader color={color} loading={loading} size={20} aria-label="Loading Spinner" data-testid="loader"/>
             Register

@@ -1,8 +1,8 @@
 import Link from "next/link";
-
-export default function Navbar() {
+export default function Add() {
   return (
     <div className="">
+      
     <nav className="flex justify-between items-center bg-slate-800 px-8 py-3 ">
       <Link className="text-white font-bold" href={"/"}>
         welcome shazaniyu

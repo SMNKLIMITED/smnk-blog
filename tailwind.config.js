@@ -12,6 +12,11 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      flexGrow: {
+        '7': 7,
+        '8': 8,
+        // Add more values as needed
+      },
     },
   },
   plugins: [],
